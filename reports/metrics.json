@@ -1,0 +1,284 @@
+{
+  "donnees": {
+    "entrainement": 160000,
+    "validation": 20000,
+    "test": 20000,
+    "part_positives": 0.504,
+    "mots_par_critique": {
+      "mediane": 67.0,
+      "moyenne": 92.52575
+    }
+  },
+  "approche_retenue": "Combinaison (logistique + SVM)",
+  "resultats": [
+    {
+      "approche": "Combinaison (logistique + SVM)",
+      "parametre": null,
+      "val_accuracy": 0.9466,
+      "test_accuracy": 0.9474,
+      "test_f1": 0.9454,
+      "test_roc_auc": 0.9879,
+      "temps_s": null
+    },
+    {
+      "approche": "Régression logistique (mots et paires de mots)",
+      "parametre": 10.0,
+      "val_accuracy": 0.9442,
+      "test_accuracy": 0.945,
+      "test_f1": 0.9428,
+      "test_roc_auc": 0.9877,
+      "temps_s": 173.7081
+    },
+    {
+      "approche": "SVM linéaire (morceaux de mots)",
+      "parametre": 0.3,
+      "val_accuracy": 0.9314,
+      "test_accuracy": 0.9314,
+      "test_f1": 0.9286,
+      "test_roc_auc": 0.9816,
+      "temps_s": 558.0352
+    },
+    {
+      "approche": "Naive Bayes (mots)",
+      "parametre": 0.1,
+      "val_accuracy": 0.9228,
+      "test_accuracy": 0.9238,
+      "test_f1": 0.92,
+      "test_roc_auc": 0.9677,
+      "temps_s": 124.8455
+    },
+    {
+      "approche": "Règles (liste de mots)",
+      "parametre": null,
+      "val_accuracy": 0.6518,
+      "test_accuracy": 0.6554,
+      "test_f1": 0.7284,
+      "test_roc_auc": 0.7917,
+      "temps_s": 1.1627
+    }
+  ],
+  "matrice_confusion_test": {
+    "vrais_negatifs": 9858,
+    "faux_positifs": 550,
+    "faux_negatifs": 501,
+    "vrais_positifs": 9091
+  },
+  "courbe_apprentissage": [
+    {
+      "critiques": 500,
+      "test_accuracy": 0.8254
+    },
+    {
+      "critiques": 2000,
+      "test_accuracy": 0.8789
+    },
+    {
+      "critiques": 5000,
+      "test_accuracy": 0.90325
+    },
+    {
+      "critiques": 20000,
+      "test_accuracy": 0.926
+    },
+    {
+      "critiques": 50000,
+      "test_accuracy": 0.93535
+    },
+    {
+      "critiques": 160000,
+      "test_accuracy": 0.94495
+    }
+  ],
+  "mots_positifs": [
+    {
+      "mot": "magnifique",
+      "poids": 16.684
+    },
+    {
+      "mot": "excellent",
+      "poids": 16.016
+    },
+    {
+      "mot": "superbe",
+      "poids": 15.657
+    },
+    {
+      "mot": "beau film",
+      "poids": 13.586
+    },
+    {
+      "mot": "sublime",
+      "poids": 13.073
+    },
+    {
+      "mot": "merveille",
+      "poids": 12.865
+    },
+    {
+      "mot": "ne ennuie",
+      "poids": 12.198
+    },
+    {
+      "mot": "bon film",
+      "poids": 12.192
+    },
+    {
+      "mot": "parfaitement",
+      "poids": 11.981
+    },
+    {
+      "mot": "bijou",
+      "poids": 11.868
+    },
+    {
+      "mot": "pas mal",
+      "poids": 11.712
+    },
+    {
+      "mot": "génial",
+      "poids": 11.521
+    },
+    {
+      "mot": "remarquable",
+      "poids": 11.384
+    },
+    {
+      "mot": "parfait",
+      "poids": 11.306
+    },
+    {
+      "mot": "bravo",
+      "poids": 11.261
+    }
+  ],
+  "mots_negatifs": [
+    {
+      "mot": "ennui",
+      "poids": -20.176
+    },
+    {
+      "mot": "plv",
+      "poids": -19.835
+    },
+    {
+      "mot": "déception",
+      "poids": -19.518
+    },
+    {
+      "mot": "ennuyeux",
+      "poids": -19.512
+    },
+    {
+      "mot": "navet",
+      "poids": -16.936
+    },
+    {
+      "mot": "décevant",
+      "poids": -16.569
+    },
+    {
+      "mot": "médiocre",
+      "poids": -13.824
+    },
+    {
+      "mot": "on ennuie",
+      "poids": -13.449
+    },
+    {
+      "mot": "raté",
+      "poids": -13.054
+    },
+    {
+      "mot": "ridicule",
+      "poids": -12.896
+    },
+    {
+      "mot": "plat",
+      "poids": -12.766
+    },
+    {
+      "mot": "intérêt",
+      "poids": -12.536
+    },
+    {
+      "mot": "éviter",
+      "poids": -12.429
+    },
+    {
+      "mot": "mauvais",
+      "poids": -12.424
+    },
+    {
+      "mot": "nul",
+      "poids": -12.415
+    }
+  ],
+  "erreur_selon_longueur_pct": {
+    "courtes": 5.44,
+    "moyennes": 4.89,
+    "longues": 5.27,
+    "très longues": 5.43
+  },
+  "erreur_selon_negation_pct": {
+    "avec négation": 5.25,
+    "sans négation": 5.27
+  },
+  "exemples": [
+    {
+      "phrase": "Un film magnifique, des acteurs justes et une fin qui m'a ému.",
+      "attendu": 1,
+      "regles": 1,
+      "logistique": 1,
+      "svm": 1
+    },
+    {
+      "phrase": "Deux heures d'ennui, un scénario creux et des dialogues ridicules.",
+      "attendu": 0,
+      "regles": 0,
+      "logistique": 0,
+      "svm": 0
+    },
+    {
+      "phrase": "Pas mauvais du tout, je ne m'attendais pas à passer un si bon moment.",
+      "attendu": 1,
+      "regles": 1,
+      "logistique": 1,
+      "svm": 0
+    },
+    {
+      "phrase": "Je ne recommande pas : rien n'est réussi, ni l'histoire ni la mise en scène.",
+      "attendu": 0,
+      "regles": 0,
+      "logistique": 0,
+      "svm": 0
+    },
+    {
+      "phrase": "Bravo aux scénaristes, il fallait oser faire aussi plat pendant deux heures.",
+      "attendu": 0,
+      "regles": 1,
+      "logistique": 0,
+      "svm": 0
+    },
+    {
+      "phrase": "Le début est lent mais la seconde moitié est vraiment excellente.",
+      "attendu": 1,
+      "regles": 1,
+      "logistique": 0,
+      "svm": 1
+    },
+    {
+      "phrase": "Les effets spéciaux sont superbes, dommage que l'histoire ne suive pas.",
+      "attendu": 0,
+      "regles": 0,
+      "logistique": 0,
+      "svm": 1
+    },
+    {
+      "phrase": "Rien d'original, mais ça se regarde avec plaisir en famille.",
+      "attendu": 1,
+      "regles": 1,
+      "logistique": 0,
+      "svm": 0
+    }
+  ]
+}
